@@ -1,6 +1,13 @@
 # Ansible-Patch-Playbook
 This will help you to run different command from ansible playbook
 
+# Clone code
+
+```shell
+git clone https://github.com/arsalan-125/ansible-patch-playbook.git
+cd ansible-patch-playbook
+```
+
 # To Run the playbook, open your terminal
 
 Type the following command
