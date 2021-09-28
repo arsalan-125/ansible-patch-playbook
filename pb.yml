@@ -21,4 +21,4 @@
       shell: docker ps
       register: out
     - debug: var=out.stdout_lines
-    - pause: seconds=3
+    - pause: seconds=3 
