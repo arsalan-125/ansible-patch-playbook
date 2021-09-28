@@ -1,5 +1,6 @@
-- name: my-ec2-1
+- name: all
   hosts: all
+  serial: 1
   gather_facts: false
   vars:
     node_version: 6
@@ -20,6 +21,4 @@
       shell: docker ps
       register: out
     - debug: var=out.stdout_lines
-    - name: Wait 5 minute before move to next host
-      pause:
-      minutes: 5
+    - pause: seconds=3
