@@ -1,0 +1,21 @@
+- name: my-ec2-1
+  hosts: all
+  gather_facts: false
+  vars:
+    node_version: 6
+  tasks:
+    - name: stop docker
+      shell:  systemctl stop docker.socket
+      register: out
+    - debug: var=out.stdout_lines
+    - name: stop docker
+      shell:  systemctl start docker.socket
+      register: out
+    - debug: var=out.stdout_lines
+    - name: verify container
+      shell: docker ps
+      register: out
+    - debug: var=out.stdout_lines
+    - name: Pause for 5 minutes to build app cache
+      pause:
+      minutes: 5

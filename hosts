@@ -1,0 +1,2 @@
+[my-ec2-1]
+15.207.222.223 ansible_user=root ansible_ssh_private_key_file=/Users/arsalan/.ssh/id_rsa ansible_port=22
