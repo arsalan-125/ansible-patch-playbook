@@ -31,7 +31,7 @@ Following parameters should be changed base on config
 [my-ec2-2]
 15.207.222.224 ansible_user=root ansible_ssh_private_key_file=/Users/arsalan/.ssh/id_rsa ansible_port=22
 ```
-# Add more task
+# Add more tasks
 
 If you want to add more tasks simply add your task in pb.yml file e.g
 ```shell
