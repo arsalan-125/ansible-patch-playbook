@@ -1,0 +1,20 @@
+# Ansible-Patch-Playbook
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+
+# To Run the playbook, open your terminal
+
+# Type the following command
+ansible-playbook -i hosts pb.yml
+
+# If you want to add more servers go to hosts file and paste server ip
+192.168.1.1
+
+# If you want to add more tasks simply add your task in pb.yml file e.g
+- name: verify container
+  shell:  systemctl docker ps
+  register: out
+- debug: var=out.stdout_lines
+
+- ✨Magic ✨
