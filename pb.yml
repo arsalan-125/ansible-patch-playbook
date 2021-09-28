@@ -8,6 +8,10 @@
       shell:  systemctl stop docker.socket
       register: out
     - debug: var=out.stdout_lines
+    - name: update patches
+      shell:  yum -y update --security
+      register: out
+    - debug: var=out.stdout_lines
     - name: stop docker
       shell:  systemctl start docker.socket
       register: out
@@ -16,6 +20,6 @@
       shell: docker ps
       register: out
     - debug: var=out.stdout_lines
-    - name: Pause for 5 minutes to build app cache
+    - name: Wait 5 minute before move to next host
       pause:
       minutes: 5
