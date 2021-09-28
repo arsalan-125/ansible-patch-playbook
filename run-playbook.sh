@@ -1,1 +1,1 @@
-ansible-playbook -i hosts sshkeys.yml
+ansible-playbook -i hosts pb.yml
