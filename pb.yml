@@ -9,15 +9,31 @@
       shell:  systemctl stop docker.socket
       register: out
     - debug: var=out.stdout_lines
+    
+    - name: stop Kubernetes
+      shell:  Systemctl stop kubelet
+      register: out
+    - debug: var=out.stdout_lines
+    
     - name: update patches
       shell:  yum -y update --security
       register: out
     - debug: var=out.stdout_lines
+    
     - name: start docker
       shell:  systemctl start docker.socket
       register: out
     - debug: var=out.stdout_lines
+    
+    - name: start Kubernetes
+      shell:  Systemctl start kubelet
+      register: out
+    - debug: var=out.stdout_lines
+    
     - name: verify container
       shell: docker ps
       register: out
     - debug: var=out.stdout_lines 
+    
+    
+    
