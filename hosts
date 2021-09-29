@@ -1,4 +1,2 @@
 [my-ec2-1]
 15.207.222.223 ansible_user=root ansible_ssh_private_key_file=/Users/arsalan/.ssh/id_rsa ansible_port=22
-[my-ec2-2]
-ec2-13-58-64-153.us-east-2.compute.amazonaws.com ansible_user=root ansible_ssh_private_key_file=/Users/adilm/Downloads/livewaves-backup.pem ansible_port=22 
