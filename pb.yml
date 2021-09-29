@@ -13,12 +13,11 @@
       shell:  yum -y update --security
       register: out
     - debug: var=out.stdout_lines
-    - name: stop docker
+    - name: start docker
       shell:  systemctl start docker.socket
       register: out
     - debug: var=out.stdout_lines
     - name: verify container
       shell: docker ps
       register: out
-    - debug: var=out.stdout_lines
-    - pause: seconds=3 
+    - debug: var=out.stdout_lines 
