@@ -49,5 +49,8 @@
        delay: 10
        timeout: 80
       connection: local
-    
+    - name: Check the Uptime of the servers
+      shell: "uptime"
+      register: Uptime
+    - debug: var=Uptime
     
